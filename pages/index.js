@@ -1,5 +1,8 @@
+import Login from '../components/login';
+import '../styles/login.css'
+
 function Home() {
-    return <div>Welcome to Next.js!</div>;
+    return <Login />;
   }
   
   export default Home;
