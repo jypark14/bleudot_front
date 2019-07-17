@@ -8,7 +8,7 @@ class LocationInput extends React.component {
 				<Location /><span className="icon-label">Location</span>
 				<label for="location-input-dropdown">Start Time: </label>
 				<select name="location-input-dropdown">
-					<option value="sample1">Sample 1</option>
+					<option value="sample1" selected>Sample 1</option>
 					<option value="sample1">Sample 2</option>
 				</select>
 			</div>
