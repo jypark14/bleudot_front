@@ -1,9 +1,12 @@
-import Event from './components/Event';
+import Event from '../components/Event';
 function Home() {
     return (
-    <div>Welcome to Next.js!</div>
-    <Event />
-    );
+      <div className="container">
+        <div>Welcome to Next.js!</div>
+        <Event />
+      </div>
+    
+    )
     
   }
   
