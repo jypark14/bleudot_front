@@ -1,7 +1,7 @@
 import React from 'react';
 import Clock from './icons/clock';
 
-class TimeInput extends React.component {
+class TimeInput extends React.Component {
 	render() {
 		return (
 			<div className="time-input">

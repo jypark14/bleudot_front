@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ColorInput extends React.component {
+class ColorInput extends React.Component {
 	render() {
 		return (
 			<div className="color-input">

@@ -1,7 +1,7 @@
 import React from 'react';
 import Location from './icons/location';
 
-class LocationInput extends React.component {
+class LocationInput extends React.Component {
 	render() {
 		return (
 			<div className="location-input">
