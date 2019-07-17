@@ -13,7 +13,7 @@ class Event extends React.Component {
         </div>
 
         <div className="two-column form">
-          <input name="event-name" value="Enter Event Name"> </input>
+          <input name="event-name" value="Enter Event Name" /> 
           <button className="event-button">Save</button>
         </div>
         <div className="two-column">
@@ -30,9 +30,9 @@ class Event extends React.Component {
           <a className="add-link-text" href="">Add Links</a>
           <label className="switch">
             Make Event RSVP
-            <input type="checkbox" />
-            <span className="slider round"></span>
           </label>
+          <input type="checkbox" />
+            <span className="slider round"></span>
           <select name="rsvp-list">
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
