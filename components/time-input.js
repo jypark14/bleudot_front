@@ -7,14 +7,13 @@ class TimeInput extends React.Component {
 			<div className="time-input">
 				<Clock /><span className="icon-label">Time</span>
 				<label for="start-time-input">Start Time: 
-					<input type="time" name="start-time-input" required>
-					</input>
 				</label>
+				<input type="time" name="start-time-input" required></input>
 
 				<label for="end-time-input">End Time: 
-					<input type="time" name="end-time-input" required>
-					</input>
 				</label>
+				<input type="time" name="end-time-input" required>
+				</input>
 				
 			</div>
 		)
