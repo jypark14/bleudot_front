@@ -5,8 +5,8 @@ class LocationInput extends React.Component {
 	render() {
 		return (
 			<div className="location-input">
-				<Location /><span className="icon-label">Location</span>
-				<label for="location-input-dropdown">Location: 
+				<Location />
+				<label for="location-input-dropdown">Location
 				</label>
 				<select name="location-input-dropdown">
 						<option value="sample1" selected>Sample 1</option>
