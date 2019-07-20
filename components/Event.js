@@ -9,7 +9,7 @@ class Event extends React.Component {
       <div>
           {/* Not sure what is going inside the banner so I left it blank*/}
         <div className="banner">
-                  
+          Add Banner
         </div>
 
         <div className="two-column form">
@@ -41,6 +41,19 @@ class Event extends React.Component {
         <div className="one-column align-right">
           <button>Delete</button>
         </div>
+        {/* Applying CSS, taking care of the layout at here */}
+        <style jsx> {`
+          .banner {
+            width: 358px;
+            height: 105px;
+            border: 1px solid #03BFED;
+            box-sizing: border-box;
+            border-radius: 4px;
+          }
+
+          
+        `}
+        </style>
       </div>
     )
   }
