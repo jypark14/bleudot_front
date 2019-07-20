@@ -49,9 +49,21 @@ class Event extends React.Component {
             border: 1px solid #03BFED;
             box-sizing: border-box;
             border-radius: 4px;
+
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+
+            text-align: center;
+            vertical-align: middle;
+            line-height: 105px;
+            color: #03BFED;
+
+            
           }
 
-          
+
         `}
         </style>
       </div>
