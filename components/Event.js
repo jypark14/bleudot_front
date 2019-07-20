@@ -13,10 +13,10 @@ class Event extends React.Component {
         </div>
 
         <div className="two-column form">
-          <input name="event-name" value="Enter Event Name" /> 
+          <input name="event-name" value="Event Name" /> 
           <button className="event-button">Save</button>
         </div>
-        <div className="two-column">
+        <div className="two-column time-location-row">
           <TimeInput />
           <LocationInput />
         </div>
@@ -59,10 +59,62 @@ class Event extends React.Component {
             vertical-align: middle;
             line-height: 105px;
             color: #03BFED;
-
-            
+          }
+          
+          .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .form {
+            display: block;
+            margin: 23px 0;
+            margin-left: 21px;
           }
 
+          .event-button {
+            width: 56px;
+            height: 25px;
+            border: 1px solid #03BFED;
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin-left: 25px;
+
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+
+            color: #03BFED;
+          }
+          
+          .form input {
+            width: 268px;
+            height: 25px;
+            padding-left: 19px;
+            
+            border: 1px solid #5F5F5F;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+
+            color: #5F5F5F;
+          }
+
+          .event-button:hover {
+            background-color: #03BFED;
+            color: #ffffff;
+          }
+
+          .time-location-row {
+            grid-column-gap: 55px;
+          }
 
         `}
         </style>
