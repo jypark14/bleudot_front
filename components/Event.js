@@ -7,47 +7,50 @@ class Event extends React.Component {
   render () {
     return (
       <div className="event-container">
+        <div className="event-container-content">
           {/* Not sure what is going inside the banner so I left it blank*/}
-        <div className="banner">
-          Add Banner
-        </div>
+          <div className="banner">
+            Add Banner
+          </div>
 
-        <div className="two-column form">
-          <input name="event-name" value="Event Name" /> 
-          <button className="event-button">Save</button>
-        </div>
-        <div className="two-column time-location-row">
-          <TimeInput />
-          <LocationInput />
-        </div>
-        <div className="one-column align-right">
-          <ColorInput />
-        </div>
-        <div className="one-column input">
-          <input type="text" name="description-box" placeholder="Add description..." required/>
-        </div>
-        <div className="one-column add-link">
-          <a className="label-style add-link-text" href="">Add Links</a>
-        </div>
+          <div className="two-column form">
+            <input name="event-name" value="Event Name" /> 
+            <button className="event-button">Save</button>
+          </div>
+          <div className="two-column time-location-row">
+            <TimeInput />
+            <LocationInput />
+          </div>
+          <div className="one-column align-right">
+            <ColorInput />
+          </div>
+          <div className="one-column input">
+            <input type="text" name="description-box" placeholder="Add description..." required/>
+          </div>
+          <div className="one-column add-link">
+            <a className="label-style add-link-text" href="">Add Links</a>
+          </div>
 
-        <div className="one-column switch">
-          <label className="label-style">
-              Make Event RSVP
-          </label>
-          <input type="checkbox" name="" className="toggle-btn"/>
-        </div>
+          <div className="one-column switch">
+            <label className="label-style">
+                Make Event RSVP
+            </label>
+            <input type="checkbox" name="" className="toggle-btn"/>
+          </div>
 
-        <div className="one-column">
-          <select name="rsvp-list">
-            <option value="">RSVP List</option>
-            <option value="">--------</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-          </select>
+          <div className="one-column rsvp-list-div align-left">
+            <select name="rsvp-list">
+              <option value="">RSVP List</option>
+              <option value="">--------</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+            </select>
+          </div>
+          <div className="one-column align-right">
+            <button className="event-button delete-btn">Delete</button>
+          </div>
         </div>
-        <div className="one-column align-right">
-          <button>Delete</button>
-        </div>
+        
         {/* Applying CSS, taking care of the layout at here */}
         <style jsx> {`
           .event-container {
@@ -92,8 +95,8 @@ class Event extends React.Component {
           }
 
           .event-button {
-            width: 56px;
-            height: 25px;
+            padding: 4px 13px;
+
             border: 1px solid #03BFED;
             box-sizing: border-box;
             border-radius: 4px;
@@ -212,9 +215,29 @@ class Event extends React.Component {
             left: 11px;
           }
 
-
-
+          .rsvp-list-div select {
+						margin-left: 9px;
+						min-width: 122px;
+						border: none;
+						border-bottom: 1px solid #5F5F5F;
+						background-color: #ffffff;
+						border-radius: 1px;
+					}
           
+          .delete-btn {
+            color: #5F5F5F;
+            mix-blend-mode: normal;
+            border: 1px solid #5F5F5F;
+            text-transform: uppercase;
+          }
+
+          .align-right {
+            justify-content: right;
+          }
+
+          .align-left {
+            justify-content: left;
+          }  
         `}
         </style>
       </div>
