@@ -6,7 +6,7 @@ import ColorInput from './color-input';
 class Event extends React.Component {
   render () {
     return (
-      <div>
+      <div className="event-container">
           {/* Not sure what is going inside the banner so I left it blank*/}
         <div className="banner">
           Add Banner
@@ -23,16 +23,21 @@ class Event extends React.Component {
         <div className="one-column align-right">
           <ColorInput />
         </div>
-        <div className="one-column">
-          <input type="text" name="description-box" value="Add description..." required/>
+        <div className="one-column input">
+          <input type="text" name="description-box" placeholder="Add description..." required/>
         </div>
-        <div className="one-column">
-          <a className="add-link-text" href="">Add Links</a>
-          <label className="switch">
-            Make Event RSVP
+        <div className="one-column add-link">
+          <a className="label-style add-link-text" href="">Add Links</a>
+        </div>
+
+        <div className="one-column switch">
+          <label className="label-style">
+              Make Event RSVP
           </label>
-          <input type="checkbox" />
-            <span className="slider round"></span>
+          <input type="checkbox" name="" className="toggle-btn"/>
+        </div>
+
+        <div className="one-column">
           <select name="rsvp-list">
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
@@ -43,6 +48,18 @@ class Event extends React.Component {
         </div>
         {/* Applying CSS, taking care of the layout at here */}
         <style jsx> {`
+          .event-container {
+            width: 407px;
+            // height: 497px;
+
+            background: #FFFFFF;
+            border: 1px solid #5F5F5F;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba (0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(4px);
+            border-radius: 4px;
+          }
+
           .banner {
             width: 358px;
             height: 105px;
@@ -116,6 +133,82 @@ class Event extends React.Component {
             grid-column-gap: 55px;
           }
 
+          .input input{
+            width: 339px;
+            height: 79px;
+
+            border: 1px solid #5F5F5F;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+          }
+          
+          .input input[type=text]::placeholder {
+            text-indent: 9px;
+            text-align: left;
+          }
+          .one-column {
+            display: grid;
+          }
+          .add-link {
+            margin-top: 14px;
+          }
+
+          .label-style {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #5F5F5F;
+          }
+
+          .switch {
+            margin: 18px 0;
+          }
+
+          .toggle-btn {
+            width: 24px;
+            height: 13px;
+            position: relative;
+            margin: 10px;
+            -webkit-appearance: none;
+
+            background: #E2E1E1;
+            border-radius: 16px;  
+            outline: none;        
+          }
+
+          .toggle-btn:checked:nth-of-type(1) {
+            background: linear-gradient(0deg, #03BFED, #03BFED);
+          }
+
+          .toggle-btn:checked:nth-of-type(2) {
+            background: linear-gradient(0deg, #70a1ff, #1e90ff);
+          }
+
+          .toggle-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            background: #FFFFFF;
+            border: 1px solid #03BFED;
+            border-radius: 7px;
+            box-sizing: border-box;
+            transform: scale(.98,.96);
+            transition: .5s;
+          }
+
+          .toggle-btn:checked:before {
+            left: 11px;
+          }
+
+          
+
+          
         `}
         </style>
       </div>
