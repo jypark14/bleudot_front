@@ -16,8 +16,8 @@ class ColorInput extends React.Component {
 
 					.color-input {
 						display: grid;
-						padding-left: 189px;
 						grid-template-columns: repeat(2, auto);
+						grid-column-gap: 40px;
 						margin: 16px 0;
 					}
 					.icon-label {
