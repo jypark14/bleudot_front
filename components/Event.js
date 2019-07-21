@@ -31,7 +31,7 @@ class Event extends React.Component {
             <a className="label-style add-link-text" href="">Add Links</a>
           </div>
 
-          <div className="one-column switch">
+          <div className="two-column switch">
             <label className="label-style">
                 Make Event RSVP
             </label>
@@ -65,6 +65,16 @@ class Event extends React.Component {
             border-radius: 4px;
           }
 
+          .event-container-content {
+            padding: 23px 37px 23px 12px;
+          }
+          .two-column {
+            margin-left: 21px;
+          }
+          .one-column {
+            margin-left: 21px;
+          }
+          
           .banner {
             width: 358px;
             height: 105px;
@@ -89,9 +99,10 @@ class Event extends React.Component {
           }
           
           .form {
-            display: block;
-            margin: 23px 0;
-            margin-left: 21px;
+            margin-top: 23px;
+            margin-bottom: 23px;
+            grid-column-gap: 13px;
+
           }
 
           .event-button {
@@ -100,7 +111,6 @@ class Event extends React.Component {
             border: 1px solid #03BFED;
             box-sizing: border-box;
             border-radius: 4px;
-            margin-left: 25px;
 
             font-family: Nunito;
             font-style: normal;
@@ -169,8 +179,8 @@ class Event extends React.Component {
           }
 
           .switch {
-            margin: 18px 0;
-            display: grid;
+            margin-top: 18px;
+            margin-bottom: 18px;
             grid-template-columns: auto auto;
             grid-column-gap: 2px;
             justify-content: start;
@@ -216,7 +226,6 @@ class Event extends React.Component {
           }
 
           .rsvp-list-div select {
-						margin-left: 9px;
 						min-width: 122px;
 						border: none;
 						border-bottom: 1px solid #5F5F5F;
@@ -230,6 +239,10 @@ class Event extends React.Component {
             border: 1px solid #5F5F5F;
             text-transform: uppercase;
           }
+          
+          .delete-btn:hover {
+            background-color: #5F5F5F;
+          }
 
           .align-right {
             justify-content: right;
@@ -237,7 +250,7 @@ class Event extends React.Component {
 
           .align-left {
             justify-content: left;
-          }  
+          } 
         `}
         </style>
       </div>
