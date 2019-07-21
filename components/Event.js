@@ -39,6 +39,8 @@ class Event extends React.Component {
 
         <div className="one-column">
           <select name="rsvp-list">
+            <option value="">RSVP List</option>
+            <option value="">--------</option>
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
           </select>
@@ -165,13 +167,17 @@ class Event extends React.Component {
 
           .switch {
             margin: 18px 0;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 2px;
+            justify-content: start;
+            align-items: start;
           }
 
           .toggle-btn {
             width: 24px;
             height: 13px;
             position: relative;
-            margin: 10px;
             -webkit-appearance: none;
 
             background: #E2E1E1;
@@ -206,7 +212,7 @@ class Event extends React.Component {
             left: 11px;
           }
 
-          
+
 
           
         `}
