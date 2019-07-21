@@ -13,6 +13,7 @@ class ColorInput extends React.Component {
 				</div>
 
 				<style jsx> {`
+
 					.color-input {
 						display: grid;
 						padding-left: 189px;
