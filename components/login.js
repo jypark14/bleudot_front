@@ -35,7 +35,9 @@ export default class Login extends React.Component {
 
     render() {
         return (
-          <div className="Login">
+
+          <div className="Login" style={loginStyle}>
+            <img src="bleudot.png" alt="die"/>
             <form onSubmit={this.attemptLogin}>
               {
                 this.state.error &&
@@ -44,11 +46,9 @@ export default class Login extends React.Component {
                   {this.state.error}
                 </h3>
               }
-              <label>User Name</label>
-              <input type="text" data-test="username" value={this.state.username} onChange={this.handleEmailChange} />
+              <input type="text" data-test="username" value={this.state.username} onChange={this.handleEmailChange} placeholder={"Email"} />
     
-              <label>Password</label>
-              <input type="password" data-test="password" value={this.state.password} onChange={this.handlePasswordChange} />
+              <input type="password" data-test="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder={"Password"}/>
     
               <input type="submit" value="Log In" data-test="submit" />
             </form>
@@ -56,3 +56,14 @@ export default class Login extends React.Component {
         );
       }
 }
+const loginStyle = {
+  position: "absolute",
+  width: 690,
+  height: 528,
+  left: 375,
+  top: 186,
+  background: "light grey",
+  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+  }
+  
+  

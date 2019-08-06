@@ -14,5 +14,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "file-loader": "^4.1.0",
+    "image-webpack-loader": "^5.0.0"
   }
 }
