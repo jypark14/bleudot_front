@@ -9,27 +9,27 @@ export default class Nav extends React.Component {
 				<div className="nav-container">
 					<div className="nav-left-side">
 						<Link to="/" className="nav-logo">
-							<img alt="Bleu Dot" src={require('../public/bluedot_new.svg')} className="nav-logo-icon" href="./index.js"></img>
+							<img alt="Bleu Dot" src={require('./public/bleudot_new.svg')} className="nav-logo-icon" href="./index.js"></img>
 						</Link>
 
 						<div className="nav-page-btns">
-							<Link to="/"> Discover</Link>
-							<Link to="/"> Create</Link>
-							<Link to="/"> My Calendar</Link>
+							<Link to="/" className="nav-page-btn"> Discover</Link>
+							<Link to="/" className="nav-page-btn"> Create</Link>
+							<Link to="/" className="nav-page-btn"> My Calendar</Link>
 						</div>
 					</div>
 
 					<div className="nav-right-side">
 						<Link to="/">
-							<img alt="Search" src={require('../public/magnifier_search_icon.svg')} className="nav-icon"></img>
+							<img alt="Search" src={require('./public/magnifier_search_icon.svg')} className="nav-icon"></img>
 						</Link>
 
 						<Link to="/">
-							<img alt="Setting" src={require('../public/magnifier_search_icon.svg')} className="nav-icon"></img>
+							<img alt="Setting" src={require('./public/settings_White.svg')} className="nav-icon"></img>
 						</Link>
 
 						<Link to="/">
-							<img alt="Profile" src={require('../public/user_white.svg')} className="nav-icon"></img>
+							<img alt="Profile" src={require('./public/user_white.svg')} className="nav-icon"></img>
 						</Link>
 					</div>
 

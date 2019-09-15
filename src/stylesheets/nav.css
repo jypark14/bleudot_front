@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+}
+
+.nav-logo {
+	width: 160px;
+	height: 25.62px;
+}
 .main-nav {
 	top: 0;
 	left: 0;
@@ -9,7 +18,7 @@
 	display: flex;
 	max-width: 1358px;
 	justify-content: space-between;
-	margin: 32px;
+	margin: 22px 32px;
 }
 
 .nav-left-side {
@@ -19,22 +28,33 @@
 }
 
 .nav-page-btns {
-	display: grid;
+	display: flex;
+	justify-content: space-evenly;
 	width: 292px;
-	grid-template-columns: repeat(3, 1fr);
-	column-gap: 28px;
+}
+
+.nav-page-btn {
 	font-family: Nunito;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 18px;
 	line-height: 25px;
+	color: #646464;
+	text-decoration: none;
+}
+
+.nav-page-btn:visited {
+	text-decoration: none;
 }
 
 .nav-right-side {
 	width: 136px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	justify-content: space-evenly;
 	column-gap: 55px;
+}
 
-
+.nav-icon {
+	width: 25px;
+	height: 25px;
 }
