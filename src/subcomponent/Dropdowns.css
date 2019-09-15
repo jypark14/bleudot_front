@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+/* For the Language and Region text box*/
+.LR-text-container{
+    position: absolute;
+    width: 495px;
+    height: 64px;
+    left: 444px;
+    top: 100px;
+}
+
+.LR-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+
+    color: #5F5F5F;
+}
+
+/* For the Language dropdown menu */
+.language{
+    position: absolute;
+    width: 548px;
+    height: 71px;
+    left: 444px;
+    top: 201px;
+
+    border-radius: 10px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/* For the Country dropdown menu */
+.country{
+    position: absolute;
+    width: 548px;
+    height: 70px;
+    left: 444px;
+    top: 283px;
+    border-radius: 10px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/* For the Date Format dropdown menu */
+.dateFormat{
+    position: absolute;
+    width: 548px;
+    height: 71px;
+    left: 444px;
+    top: 367px;
+
+    border-radius: 10px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/* For the Time Format dropdown menu */
+.timeFormat{
+    position: absolute;
+    width: 548px;
+    height: 71px;
+    left: 444px;
+    top: 450px;
+
+    border-radius: 10px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/* For the Time Zone text box */
+.timeZone-container{
+    position: absolute;
+    width: 272px;
+    height: 56px;
+    left: 449px;
+    top: 633px;
+}
+
+.timeZone-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+    
+    color: #5F5F5F; 
+}
+
+/* For the Time Zone dropdown menu */
+.timeZone{
+    position: absolute;
+    width: 546px;
+    height: 70px;
+    left: 449px;
+    top: 730px;
+
+    border-radius: 10px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
