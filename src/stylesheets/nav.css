@@ -1,0 +1,40 @@
+.main-nav {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.nav-container {
+	display: flex;
+	max-width: 1358px;
+	justify-content: space-between;
+	margin: 32px;
+}
+
+.nav-left-side {
+	display: flex;
+	justify-content: space-between;
+	max-width: 479px;
+}
+
+.nav-page-btns {
+	display: grid;
+	width: 292px;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 28px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 25px;
+}
+
+.nav-right-side {
+	width: 136px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 55px;
+
+
+}
