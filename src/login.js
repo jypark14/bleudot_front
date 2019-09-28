@@ -39,7 +39,7 @@ export default class Login extends React.Component {
         return (
 
           <div className="Login" style={loginStyle}>
-            <img src="bleudot_bleu.svg" alt="die"/>
+            <img src={require("./public/bleudot_bleu.svg")} alt="die"/>
             <form onSubmit={this.attemptLogin}>
               {
                 this.state.error &&

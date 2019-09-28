@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
+import './stylesheets/App.css';
 import Login from './login';
 import Home from './home';
 import Event from './Event'
 import Settings from './Settings';
-
+import ProfilePage from './pages/profile_page';
 function App() {
 
-  return <Settings/>; 
+  return <ProfilePage />; 
 }
 
 export default App;
