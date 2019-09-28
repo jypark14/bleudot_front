@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './settingsStyle.css';
-import settingsLine from './assets/settingsLine.png';
 import Footer from '../subcomponent/Footer';
-import Header from './subcomponent/Header';
 import Nav from '../nav';
 import Profile from '../profile';
 
