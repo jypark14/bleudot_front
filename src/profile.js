@@ -1,13 +1,16 @@
 import React from 'react';
-
+import './stylesheets/profile.css'
+import Camera from './icons/profile_camera';
 export default class Profile extends React.Component {
 	render() {
 		return (
 			<div className="profile-component">
 				<div className="profile-bg-blue">
 					<div className="profile-icon-svg"></div>
-					<div className="profile-hover-fileImage"></div>
-				</div>
+					<div className="profile-hover-file-image">
+						<Camera />
+					</div>
+				</div>	
 
 				{/* TODO: will separate this inputs based on API request*/}
 				<div className="profile-profile">
@@ -31,7 +34,6 @@ export default class Profile extends React.Component {
 						<div className="text-field">
 							<div className="text-field-label">Password</div>
 							<div className="text-field-value">*******</div>
-							<div className="text-field-guide">Last changed 01/07/19</div>
 						</div>
 						<a href="." className="simple-btn">Edit</a>
 					</div>
