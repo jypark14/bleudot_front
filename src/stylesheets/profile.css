@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(../fonts/Nunito-Regular.ttf) format('truetype');
+}
+
+.profile-component {
+	width: 612px;
+}
+
+.profile-profile {
+	display: block;
+	padding: 0 62px;
+}
+.profile-bg-blue {
+	width: 107.93px;
+	height: 107.93px;
+	border-radius: 50%;
+	background-color: #03BFED;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 26.18px;
+}
+
+.profile-icon-svg {
+	background-image: url(../assets/user_white.svg);
+	width: 97.21px;
+	height: 97.21px;
+	left: 5.36px;
+	top: 5.36px;
+	position: absolute;
+}
+
+.profile-hover-file-image {
+	background-color: #000000;
+	opacity: 0.4;
+	width: 100%;
+	position: absolute;
+	/* text-align: center; */
+	top: 83.2px;
+	height: 25px;
+}
+
+.profile-hover-file-image svg {
+	display: block;
+	width: 23px;
+	height: 18px;
+	margin: auto;
+}
+
+.profile-header {
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 3.125em;
+	margin: 0;
+	color: #5F5F5F;
+
+}
+.profile-text-field {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 22px;
+	align-items: center;
+	width: 500px;
+	margin-top: 17px;
+	margin-bottom: 17px;
+}
+.text-field {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-column-gap: 28px; 
+	width: 458px;
+	background: #ffffff;
+	mix-blend-mode: normal;
+	border: 1px solid #5F5F5F;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 8px 9px;
+}
+
+.text-field-label {
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1em;	
+	color: #5F5F5F;
+}
+
+.text-field-value, .simple-btn {
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1em;
+
+	color: #000000;
+}
+
+.simple-btn {
+	font-weight: 600;
+	color: #03BFED;
+	text-decoration: none;
+}
+
+.profile-text-seperator {
+	width: 100%;
+	height: 1px;
+	background: #5F5F5F;
+	margin-top: 51px;
+	margin-bottom: 39px;
+}
+
+
