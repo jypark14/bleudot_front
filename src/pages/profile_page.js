@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Footer from '../subcomponent/Footer';
 import Nav from '../nav';
 import Profile from '../profile';
+import ProfileCard from '../subcomponent/profileCard';
+import '../stylesheets/ProfilePage.css'
 
 class ProfilePage extends Component {
 
@@ -9,7 +11,10 @@ class ProfilePage extends Component {
     return (
       <div className="container">
 					<Nav/>
-					<Profile/>
+          <div className="contents">
+            <ProfileCard />
+            <Profile/>
+          </div>
           <Footer/>
       </div>
     );
