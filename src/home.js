@@ -18,8 +18,9 @@ export default class Home extends React.Component {
                 </div>);
         }
         else {
-            return (<div><Nav />
+            return (<div className="container"><Nav />
             <Login loggedIn={this.state.authorized} /></div>);
+            
         }
 
     }
