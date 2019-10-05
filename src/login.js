@@ -38,8 +38,9 @@ export default class Login extends React.Component {
     render() {
         return (
 
-          <div className="Login" style={loginStyle}>
-            <img src="bleudot_bleu.svg" alt="die"/>
+          <div className="login">
+            <div className="loginTitle">Log In</div>
+            <p className="createAccount">Need an account? <a href="google.com">Create an Account.</a></p>
             <form onSubmit={this.attemptLogin}>
               {
                 this.state.error &&
@@ -48,24 +49,21 @@ export default class Login extends React.Component {
                   {this.state.error}
                 </h3>
               }
-              <input type="text" data-test="username" value={this.state.username} onChange={this.handleEmailChange} placeholder={"Email"} />
+              <p className="emailTitle">Email</p>
+              <input type="text" data-test="username" value={this.state.username} onChange={this.handleEmailChange} placeholder={"Email"} className="email" />
+              
+              <p className="passwordTitle">Password</p>
+              <input type="password" data-test="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder={"Password"} className="password"/>
     
-              <input type="password" data-test="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder={"Password"}/>
-    
-              <input type="submit" value="Log In" data-test="submit" />
+              <input type="submit" value="Log In" data-test="submit" className="submitButton"/>
+              <input type="checkbox" label="Keep me Logged In!" className="keepSignOn" /><p className="keepSignOnText">Keep me logged in</p>
+              <p className="forgotUser">Forgot <a href="google.com">Username</a>?</p>
+              <p className="forgotPass">Forgot <a href="google.com">Password</a>?</p>
+
             </form>
           </div>
         );
       }
 }
-const loginStyle = {
-  position: "absolute",
-  width: 690,
-  height: 528,
-  left: 375,
-  top: 186,
-  background: "light grey",
-  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
-  }
-  
+
   

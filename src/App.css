@@ -1,7 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+html {
+  max-width:100%;
+  overflow: hidden;
+  font-family:Nunito;
+}
 .App {
   text-align: center;
+
+  font-family: Nunito;
 }
 
+.login {
+  position: absolute;
+width: 581px;
+height: 610px;
+left: 430px;
+top: 210px;
+
+background: #F5F5F5;
+border-radius: 10px;
+}
+.loginTitle {
+  position: absolute;
+width: 319px;
+height: 64px;
+left: 131px;
+top: 46px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 68px;
+text-align: center;
+
+color: #646464;
+}
+
+.createAccount {
+  position: absolute;
+width: 270px;
+height: 20px;
+left: 169px;
+top: 124px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+
+color: #646464;
+
+}
+
+.emailTitle {
+  position: absolute;
+width: 80px;
+height: 20px;
+left: 130px;
+top: 165px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #646464;
+}
+
+.email {
+  position: absolute;
+width: 320px;
+height: 40px;
+left: 130px;
+top: 210px;
+
+background: #FFFFFF;
+border: 0.5px solid #63CCC7;
+box-sizing: border-box;
+border-radius: 5px;
+}
+.passwordTitle {
+  position: absolute;
+width: 80px;
+height: 20.13px;
+left: 129.01px;
+top: 253.8px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+
+color: #646464;
+
+}
+
+.password {
+  position: absolute;
+width: 320px;
+height: 40.25px;
+left: 130px;
+top: 299.95px;
+
+background: #FFFFFF;
+border: 0.5px solid #63CCC7;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.submitButton {
+  position: absolute;
+width: 320px;
+height: 40px;
+left: 130px;
+top: 360px;
+
+background: #63CCC7;
+border-radius: 5px;
+color:white;
+}
+.keepSignOn {
+  position: absolute;
+width: 20px;
+height: 21px;
+left: 212px;
+top: 420px;
+
+background: #FFFFFF;
+border: 0.5px solid #03BFED;
+box-sizing: border-box;
+border-radius: 3px;
+}
+.forgotUser {
+  position: absolute;
+  width: 133px;
+  height: 20px;
+  left: 237px;
+  top: 482px;
+  
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  
+  color: #646464;
+}
+.forgotPass {
+  position: absolute;
+width: 133px;
+height: 20px;
+left: 237px;
+top: 507px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+
+color: #646464;
+}
+
+.keepSignOnText {
+  position: absolute;
+width: 135px;
+height: 20px;
+left: 235px;
+top: 406px;
+
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+
+color: #646464;
+}
+
+.container {
+  height: 0%;
+  width: 100%;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -21,6 +209,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+a {
+  color: #63CCC7;
 }
 
 @keyframes App-logo-spin {
