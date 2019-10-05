@@ -4,10 +4,11 @@ import Login from './login';
 import Home from './home';
 import Event from './Event'
 import Settings from './Settings';
+import CalendarCp from './CalendarCp'
 
 function App() {
 
-  return <Settings/>; 
+  return <CalendarCp/>; 
 }
 
 export default App;
