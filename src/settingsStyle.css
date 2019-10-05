@@ -1,0 +1,19 @@
+.container{
+    flex:1;
+    width: 1440px;
+    height: 100%;
+}
+
+.line{
+    position: absolute;
+    width: 612px;
+    height: 1px;
+    left: 412px;
+    top: 600px;
+}
+
+.logo{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
