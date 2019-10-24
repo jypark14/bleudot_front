@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.events{
+    margin-top: 31px;
+    margin-right: 61px; 
+    width: 326px;
+    height: 230px;
+    border-radius: 15px;
+    display: inline-block;
+}
