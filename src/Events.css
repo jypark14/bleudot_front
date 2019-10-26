@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-.events{
-    margin-top: 31px;
-    margin-right: 61px; 
-    width: 326px;
-    height: 230px;
-    border-radius: 15px;
+.card{
+    width: 320px;
+    height: 167px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
     display: inline-block;
+    margin-right: 30px; 
+    margin-top: 20px; 
+}
+
+.image{
+    width: 320px;
+    height: 89px;
+}
+
+.day{
+    font-size: 9px;
 }

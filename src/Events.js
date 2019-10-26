@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Card} from 'react-bootstrap';
-import "./Events.css"
+// import "./Events.css";
+import Stock from "./stock.png";
+import Line from "./line.png"
 
 class Events extends Component {
   constructor(props) {
@@ -11,16 +12,41 @@ class Events extends Component {
 
   render() {
     return (
-        <div>
-            {this.props.categoryName.map(((category, id) => {
-                return(
+      <div>
+        {this.props.categoryName.map(((category, id) => {
+          return (
+            <div className="card">
+              <div className="image">
+                  <div className="img-container">
+                    <img src={Stock}></img>
+                    <button className="export">Export Event</button>
+                  </div>
+           
+              </div>
+              <div className="card-body">
+                <div className="day">
+                  <a className="curr-date">{this.props.event.day[id]} <br></br> {this.props.event.month[id]}</a>  
+                </div>
+               
+                <img src={Line} className="img"></img>
                 
-                <Card className="events"></Card>
-                
-                )
-            }))}
-            
-       </div>
+                <div className="content">
+                  <a className="event-title">
+                    {this.props.event.title[id]} <br></br>
+                  </a>
+                  <a className="event-details">
+                    Hosted By {this.props.event.org[id]} <br></br>
+                  </a>
+                  <a className="event-time">
+                    {this.props.event.time[id]} <br></br>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )
+        }))}
+
+      </div>
     );
   }
 }
