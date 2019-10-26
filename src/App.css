@@ -1,225 +1,155 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-html {
-  max-width:100%;
-  overflow: hidden;
-  font-family:Nunito;
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.main-component{
+    background-color: #E2E2E2;
+    height: 2000px;
 }
-.App {
-  text-align: center;
-
-  font-family: Nunito;
+.scroll{
+    width: 2000px;
+    height:260px;
 }
-
-.login {
-  position: absolute;
-width: 581px;
-height: 610px;
-left: 430px;
-top: 210px;
-
-background: #F5F5F5;
-border-radius: 10px;
+.side-banner{
+    height:100%;
+    width: 150px;
+    background-color: grey;
 }
-.loginTitle {
-  position: absolute;
-width: 319px;
-height: 64px;
-left: 131px;
-top: 46px;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 68px;
-text-align: center;
-
-color: #646464;
+.category{
+    margin-top:50px;
+    margin-left:222px;
+}
+.title{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: 0px;
 }
 
-.createAccount {
-  position: absolute;
-width: 270px;
-height: 20px;
-left: 169px;
-top: 124px;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-text-align: center;
-
-color: #646464;
-
+.button1{
+    margin-left: 222px !important;
+    margin-top: 100px !important;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px; 
+    border-width: 1px; 
+    border-right-width: 0px;
 }
 
-.emailTitle {
-  position: absolute;
-width: 80px;
-height: 20px;
-left: 130px;
-top: 165px;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-
-color: #646464;
+.button2{
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px; 
+    border-width: 1px;
+}
+.logo{
+    height: 0px; 
 }
 
-.email {
-  position: absolute;
-width: 320px;
-height: 40px;
-left: 130px;
-top: 210px;
+/* @import url('https://fonts.googleapis.com/css?family=Nunito'); */
 
-background: #FFFFFF;
-border: 0.5px solid #63CCC7;
-box-sizing: border-box;
-border-radius: 5px;
-}
-.passwordTitle {
-  position: absolute;
-width: 80px;
-height: 20.13px;
-left: 129.01px;
-top: 253.8px;
+.card{
+    width: 320px;
+    height: 167px;
 
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-
-color: #646464;
-
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 30px; 
+    margin-top: 20px; 
 }
 
-.password {
-  position: absolute;
-width: 320px;
-height: 40.25px;
-left: 130px;
-top: 299.95px;
-
-background: #FFFFFF;
-border: 0.5px solid #63CCC7;
-box-sizing: border-box;
-border-radius: 5px;
+.image{
+    width: 320px;
+    height: 89px;
 }
 
-.submitButton {
-  position: absolute;
-width: 320px;
-height: 40px;
-left: 130px;
-top: 360px;
-
-background: #63CCC7;
-border-radius: 5px;
-color:white;
+.day{
+    font-size: 16px;
+    display: inline-block;
+    padding-left: 21px;
+    padding-top: 16px; 
+    padding-right: 16px;
+    float: left;
 }
-.keepSignOn {
-  position: absolute;
-width: 20px;
-height: 21px;
-left: 212px;
-top: 420px;
-
-background: #FFFFFF;
-border: 0.5px solid #03BFED;
-box-sizing: border-box;
-border-radius: 3px;
+.card-body{
+    display: inline-block;
+    
 }
-.forgotUser {
-  position: absolute;
-  width: 133px;
-  height: 20px;
-  left: 237px;
-  top: 482px;
-  
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  
-  color: #646464;
-}
-.forgotPass {
-  position: absolute;
-width: 133px;
-height: 20px;
-left: 237px;
-top: 507px;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-text-align: center;
-
-color: #646464;
+.img{
+    margin-top: 22px;
+    margin-right: 10px; 
+    float: left;
 }
 
-.keepSignOnText {
-  position: absolute;
-width: 135px;
-height: 20px;
-left: 235px;
-top: 406px;
-
-font-family: Nunito;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-text-align: center;
-
-color: #646464;
+.content{
+    margin-left: 18px; 
+    float: left;
+    margin-top: 11px; 
 }
 
-.container {
-  height: 0%;
-  width: 100%;
-}
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.event-title{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.event-details{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #949EA1;
 }
 
-.App-link {
-  color: #61dafb;
+.event-time{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #03BFED;
 }
 
-a {
-  color: #63CCC7;
+.curr-date{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #5F5F5F;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-container{
+    position: relative; 
+    width: 80%; 
+}
+.export{
+    position: absolute;
+    top: 70px;
+    left: 263px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:#CFF6FF;
+    color: #03BFED;
+    font-size: 11px;
+    padding: 4px 15px;
+    border-width: 1px; 
+    border-color:  #03BFED;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold; 
+    font-family: nunito;
+    
 }
