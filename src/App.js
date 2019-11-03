@@ -1,58 +1,30 @@
-import React, { Component } from 'react';
-import './stylesheets/App.css';
-import Login from './login';
-import Home from './home';
-// import Event from './Event'
-import Settings from './Settings';
-import ProfilePage from './pages/profile_page';
-import Event from './subcomponent/event'
-class App extends Component {
-  state = {};
+import React from 'react';
+import logo from './logo.svg';
+import './stylesheets/serimApp.css';
 
-  componentDidMount() {
-    this._getEvents();
-  }
+function App() {
+  return (
+    <div className="App">
 
-  
-  _getEvents = async () => {
-    const events = await this._callApi();
-    this.setState({
-      events
-    });
-  };
-
-  _callApi = () => {
-    return fetch(
-      "http://bleudot-backend-api.herokuapp.com/events/"
-    )
-      .then(response => response.json())
-      // .then(json => console.log(json))
-      .catch(err => console.log(err))
-  };
-
-  _renderEvents = () => {
-    const events = this.state.events.map(event => {
-      return (
-        <Event 
-          name={event.name} 
-          date={event.date} 
-          description={event.description} 
-          location = {event.location}
-          start_time = {event.start_time}
-        />
-      );
-    });
-    return events;
-  };
-
-  render() {
-    const { events } = this.state;
-    return (
-      <div className={events ? "App" : "App--loading"}>
-        {events ? this._renderEvents() : "Loading"}
+      <div class="topnav-container">
+        <div class="topnav-menu">
+          <a class="active" href="discover">Discover</a>
+          <a href="create">Create </a>
+        </div>
+        <div class="topnav-title">
+          <a href="">BleuDot</a>
+        </div>
       </div>
-    )
-  }
+
+      <div class="search-box">
+        Show me <input type="text" placeholder="multicultural, music, cooking..." name="search"/>
+        In <input type="text" placeholder="Community" name="search"/>
+      </div>
+
+    </div>
+
+
+  );
 }
 
 export default App;
