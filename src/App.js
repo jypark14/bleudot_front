@@ -1,7 +1,7 @@
 import React from "react";
 import DataProvider from "./DataProvider";
 import Discover from './subcomponent/Discover';
-import Nav from './Nav';
+import Nav from './nav';
 import './stylesheets/App.css';
 
 const App = () => (

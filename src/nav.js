@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Setting from "assets/setting.svg";
-import Profile from "assets/profile.svg";
+import Setting from "./assets/setting.svg";
+import Profile from "./assets/profile.svg";
 
 
 class Nav extends Component {
