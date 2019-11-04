@@ -1,16 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Magnifier from '../icons/magnifier';
 
-const Logo = () => {
-  return (
-  <div class="search-box">
-    <form method="POST">
-      Show me <input type="text" placeholder="multicultural, music, cooking..." name="search" />
-      In <input type="text" placeholder="Community" name="search" /> <button type="submit" className="search-btn">Search</button>
-    </form>
-      
-  </div>
-
-  );
+class Logo extends Component {
+	render() {
+		return (
+		<div className="search-box">
+			<input className = "search-box-input" type="text" placeholder="multicultural, music, cooking.."/>
+			<div className="checkbox-container">
+				<div className="inputBox">
+					<input type="checkbox" />
+					<span className="checkbox-custom"></span>
+				</div>
+				<div className="checkbox-real-label">Events</div>
+			</div>
+			<div className="checkbox-container">
+				<div className="inputBox">
+					<input type="checkbox" />
+					<span className="checkbox-custom"></span>
+				</div>
+				<div className="checkbox-real-label">Organizations</div>
+			</div>
+		</div> 
+		);
+	}
 }
+
 
 export default Logo;
