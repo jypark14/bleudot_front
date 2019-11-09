@@ -39,7 +39,6 @@ class Discover extends Component {
     };
   }
 
-
   render() {
     let categories = ["Upcoming Events", "Trending", "Happening Near You"]
     return (
