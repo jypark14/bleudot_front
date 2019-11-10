@@ -1,41 +1,43 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
-import Line from "../assets/line.png"
+import Line from "../assets/line.png";
+import PropTypes from "prop-types";
+
 
 class Events extends Component {
-  constructor(props) {
-    super(props);
-    this.events = props.categoryName.map(category => {
+  static propTypes = {
+    categoryName: PropTypes.array.isRequired,
+    type: PropTypes.string
+  }
+
+  state = {
+    events: this.props.categoryName.map(category => {
       return {
         id: category.id,
         name: category.name,
-        start_date: this._getDate(category.start_date),
-        start_hour: this._getHourEnd(category.start_time),
-        end_hour: this._getHourEnd(category.end_time)
+        start_date: category.start_date,
+        start_hour: category.start_time,
+        end_hour: category.end_time
       }
     })
   }
 
-  create_post = (opts) => {
-    console.log("posting request to backend server API");
-    fetch('http://bleudot-backend-api.herokuapp.com/events/', {
-      method: 'put',
-      body: JSON.stringify(opts)
-    }).then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      console.log("created Gist")
-    });
-  }
-
-  export_button = (c) => {
-    if (c) {
-      console.log(c);
-      // this.create_post({id: c.id});
+  static getDerivedStateFromProps(nextProps, prevState) {
+    let newNextProps = nextProps.categoryName.map(category => {
+      return {
+        id: category.id,
+        name: category.name,
+        start_date: category.start_date,
+        start_hour: category.start_time,
+        end_hour: category.end_time
+      }
+    })
+    if (prevState.events !== newNextProps) {
+      return {
+        events: newNextProps
+      }
     }
-    else {
-      console.log("Error")
-    }
+    return null;
   }
 
   _getDate = (start_date) => {
@@ -114,19 +116,19 @@ class Events extends Component {
   render() {
     return (
       <div className="event-container">
-        {this.events.map(((category, id) => {
+        {this.state.events.map(((category, id) => {
           return (
-            <div className="card">
+            <div key={id} className="card">
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
-                  <button onClick={this.export_button(category)} className="export">Export Event</button>
+                  <button className="export">Export Event</button>
                 </div>
 
               </div>
               <div className="card-body">
                 <div className="day">
-                  <a className="curr-date">{category.start_date.day} <br></br> {category.start_date.month}</a>
+                  <a className="curr-date">{this._getDate(category.start_date).day} <br></br> {this._getDate(category.start_date).month}</a>
                 </div>
 
                 <img src={Line} className="img"></img>
@@ -139,7 +141,7 @@ class Events extends Component {
                     Hosted By {category.organization} <br></br>
                   </a>
                   <a className="event-time">
-                    {category.start_hour + " - " + category.end_hour} <br></br>
+                    {this._getHourEnd(category.start_hour) + " - " + this._getHourEnd(category.end_hour)} <br></br>
                   </a>
                 </div>
               </div>
