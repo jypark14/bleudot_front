@@ -7,12 +7,35 @@ class Events extends Component {
     super(props);
     this.events = props.categoryName.map(category => {
       return {
+        id: category.id,
         name: category.name,
         start_date: this._getDate(category.start_date),
         start_hour: this._getHourEnd(category.start_time),
         end_hour: this._getHourEnd(category.end_time)
       }
     })
+  }
+
+  create_post = (opts) => {
+    console.log("posting request to backend server API");
+    fetch('http://bleudot-backend-api.herokuapp.com/events/', {
+      method: 'put',
+      body: JSON.stringify(opts)
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log("created Gist")
+    });
+  }
+
+  export_button = (c) => {
+    if (c) {
+      console.log(c);
+      // this.create_post({id: c.id});
+    }
+    else {
+      console.log("Error")
+    }
   }
 
   _getDate = (start_date) => {
@@ -97,7 +120,7 @@ class Events extends Component {
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
-                  <button className="export">Export Event</button>
+                  <button onClick={this.export_button(category)} className="export">Export Event</button>
                 </div>
 
               </div>
