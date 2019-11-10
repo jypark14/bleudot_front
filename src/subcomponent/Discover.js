@@ -18,7 +18,7 @@ class Discover extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
-
+  
   handleInputChange(event) {
     this.setState(current => ({ filtered: current.original.filter(item => {
       const lc = item.name.toLowerCase();

@@ -11,13 +11,28 @@ class Events extends Component {
   }
 
   state = {
-    events: []
+    events: this.props.categoryName.map(category => {
+      return {
+        id: category.id,
+        name: category.name,
+        start_date: this._getDate(category.start_date),
+        start_hour: this._getHourEnd(category.start_time)
+      }
+    })
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.events !== nextProps.categoryName) {
+    let newNextProps = nextProps.categoryName.map(category => {
       return {
-        events: nextProps.categoryName,
+        id: category.id,
+        name: category.name,
+        start_date: this._getDate(category.start_date),
+        start_hour: this._getHourEnd(category.start_time)
+      }
+    })
+    if (prevState.events !== newNextProps) {
+      return {
+        events: newNextProps
       }
     }
     return null;
