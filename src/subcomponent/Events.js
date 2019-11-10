@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
-import Line from "../assets/line.png"
+import Line from "../assets/line.png";
+import PropTypes from "prop-types";
+
 
 class Events extends Component {
-  constructor(props) {
-    super(props);
-    this.events = props.categoryName.map(category => {
+  static propTypes = {
+    categoryName: PropTypes.array.isRequired,
+    type: PropTypes.string
+  }
+
+  state = {
+    events: []
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.events !== nextProps.categoryName) {
       return {
-        name: category.name,
-        start_date: this._getDate(category.start_date),
-        start_hour: this._getHourEnd(category.start_time),
-        end_hour: this._getHourEnd(category.end_time)
+        events: nextProps.categoryName,
       }
-    })
+    }
+    return null;
   }
 
   _getDate = (start_date) => {
@@ -91,9 +99,9 @@ class Events extends Component {
   render() {
     return (
       <div className="event-container">
-        {this.events.map(((category, id) => {
+        {this.state.events.map(((category, id) => {
           return (
-            <div className="card">
+            <div key={id} className="card">
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
