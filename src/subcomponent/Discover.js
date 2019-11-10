@@ -1,69 +1,79 @@
-  
+
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Events from './Events';
-import Logo from './Logo';
 
 class Discover extends Component {
-	static propTypes = {
+  static propTypes = {
     data: PropTypes.array.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      // upcoming: ["SWE", "ECE", "IEEE", "Build", "5", "6"],
-      // trending: ["1", "2", "3", "4", "5", "6"],
-      // near: ["1", "2", "3", "4"],
-      // event_upcoming: {
-      //   title: ["Korean Food Sale", "ASA Boba Sale", "3 Sale", "4 Sale", "5 Sale", "6 Sale"],
-      //   org: ["Korean Student Association", "Asian Student Organization", "3 Org", "4 Org", "5 Org", "6 Org"],
-      //   day: ["28th", "29th", "30th", "31th", "32th", "33th"],
-      //   month: ["OCT", "OCT", "OCT", "OCT", "OCT", "OCT"],
-      //   time: ["10 AM - 2 PM", "1PM - 3PM", "3PM - 5PM", "6PM- 8PM", "8PM - 10PM", "11PM - 1AM"],
-      // },
-      // event_trending: {
-      //   title: ["Korean Food Sale", "ASA Boba Sale", "3 Sale", "4 Sale", "5 Sale", "6 Sale"],
-      //   org: ["Korean Student Association", "Asian Student Organization", "3 Org", "4 Org", "5 Org", "6 Org"],
-      //   day: ["28th", "29th", "30th", "31th", "32th", "33th"],
-      //   month: ["OCT", "OCT", "OCT", "OCT", "OCT", "OCT"],
-      //   time: ["10 AM - 2 PM", "1PM - 3PM", "3PM - 5PM", "6PM- 8PM", "8PM - 10PM", "11PM - 1AM"],
-      // },
-      // event_: {
-      //   title: ["Korean Food Sale", "ASA Boba Sale", "3 Sale", "4 Sale", "5 Sale", "6 Sale"],
-      //   org: ["Korean Student Association", "Asian Student Organization", "3 Org", "4 Org", "5 Org", "6 Org"],
-      //   day: ["28th", "29th", "30th", "31th", "32th", "33th"],
-      //   month: ["OCT", "OCT", "OCT", "OCT", "OCT", "OCT"],
-      //   time: ["10 AM - 2 PM", "1PM - 3PM", "3PM - 5PM", "6PM- 8PM", "8PM - 10PM", "11PM - 1AM"],
-      // },
+      original: props.data,
+      filtered: props.data,
+      searchBarEventChecked: false,
+      searchBarOrgChecked: false
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
+
+  handleInputChange(event) {
+    this.setState(current => ({ filtered: current.original.filter(item => {
+      const lc = item.name.toLowerCase();
+
+      // change search term to lowercase
+      const filter = document.querySelector('#main-search-box').value.toLowerCase();
+      // check to see if the current list item includes the search term
+      // If it does, it will be added to newList. Using lowercase eliminates
+      // issues with capitalization in search terms and search content
+      return lc.includes(filter);
+    })}));
+  } 
 
 
   render() {
     let categories = ["Upcoming Events", "Trending", "Happening Near You"]
     return (
       <div className="container">
-        <Logo/>
+        <div className="search-box">
+          <input id="main-search-box" className="search-box-input" type="text" placeholder="multicultural, music, cooking.." onChange={ this.handleInputChange } />
+          <div className="checkbox-container">
+            <div className="inputBox">
+              <input type="checkbox" />
+              <span className="checkbox-custom"></span>
+            </div>
+            <div className="checkbox-real-label">Events</div>
+          </div>
+          <div className="checkbox-container">
+            <div className="inputBox">
+              <input type="checkbox" />
+              <span className="checkbox-custom"></span>
+            </div>
+            <div className="checkbox-real-label">Organizations</div>
+          </div>
+        </div>
+
         {categories.map(((category, id) => {
           return (
-            <div className="category">
+            <div key={id }className="category">
               <div className="title">{category}</div>
               {(id === 0) ?
                 (
-                  <Events type="upcoming" categoryName={this.props.data} topic="upcoming"></Events>
+                  <Events type="upcoming" categoryName={this.state.filtered} topic="upcoming"></Events>
                 ) :
                 (<div></div>)
               }
               {(id === 1) ?
                 (
-                <Events categoryName={this.props.data} topic="trending"></Events>
+                  <Events categoryName={this.state.filtered} topic="trending"></Events>
                 ) :
                 (<div></div>)
               }
               {(id === 2) ?
                 (
-                  <Events categoryName={this.props.data} topic="near"></Events>
+                  <Events categoryName={this.state.filtered} topic="near"></Events>
                 ) :
                 (<div></div>)
               }
