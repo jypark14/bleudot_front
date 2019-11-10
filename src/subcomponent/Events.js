@@ -15,8 +15,9 @@ class Events extends Component {
       return {
         id: category.id,
         name: category.name,
-        start_date: this._getDate(category.start_date),
-        start_hour: this._getHourEnd(category.start_time)
+        start_date: category.start_date,
+        start_hour: category.start_time,
+        end_hour: category.end_time
       }
     })
   }
@@ -26,8 +27,9 @@ class Events extends Component {
       return {
         id: category.id,
         name: category.name,
-        start_date: this._getDate(category.start_date),
-        start_hour: this._getHourEnd(category.start_time)
+        start_date: category.start_date,
+        start_hour: category.start_time,
+        end_hour: category.end_time
       }
     })
     if (prevState.events !== newNextProps) {
@@ -126,7 +128,7 @@ class Events extends Component {
               </div>
               <div className="card-body">
                 <div className="day">
-                  <a className="curr-date">{category.start_date.day} <br></br> {category.start_date.month}</a>
+                  <a className="curr-date">{this._getDate(category.start_date).day} <br></br> {this._getDate(category.start_date).month}</a>
                 </div>
 
                 <img src={Line} className="img"></img>
@@ -139,7 +141,7 @@ class Events extends Component {
                     Hosted By {category.organization} <br></br>
                   </a>
                   <a className="event-time">
-                    {category.start_hour + " - " + category.end_hour} <br></br>
+                    {this._getHourEnd(category.start_hour) + " - " + this._getHourEnd(category.end_hour)} <br></br>
                   </a>
                 </div>
               </div>
