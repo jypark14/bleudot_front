@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Stock from "../assets/stock.png";
-import Line from "../assets/line.png";
+import Image from "../assets/basketball.jpg";
 import PropTypes from "prop-types";
 
 
@@ -27,119 +26,92 @@ class Calendar extends Component {
     }
     return null;
   }
-
-  _getDate = (start_date) => {
-    const dateArr = start_date.split("-");
-    const day = dateArr[2];
-    let month = dateArr[1];
-    let returnDay = parseInt(day);
-    switch (day.charAt(day.length - 1)) {
-      case "1":
-        returnDay += "st";
-        break;
-      case "2":
-        returnDay += "nd";
-        break;
-      case "3":
-        returnDay += "rd";
-        break;
-      default:
-        returnDay += "th";
-    }
-    switch (month) {
-      case "1":
-        month = "JAN";
-        break;
-      case "2":
-        month = "FEB";
-        break;
-      case "3":
-        month = "MAR";
-        break;
-      case "4":
-        month = "APR";
-        break;
-      case "5":
-        month = "MAY";
-        break;
-      case "6":
-        month = "JUN";
-        break;
-      case "7":
-        month = "JUL";
-        break;
-      case "8":
-        month = "AUG";
-        break;
-      case "9":
-        month = "SEP";
-        break;
-      case "10":
-        month = "OCT";
-        break;
-      case "11":
-        month = "NOV";
-        break;
-      case "12":
-        month = "DEC";
-        break;
-    }
-    return { day: returnDay, month: month }
-  }
-
-  _getHourEnd = (hour) => {
-    const timeArr = hour.split(":");
-    const hourInt = parseInt(timeArr[0]);
-    let res;
-    if (hourInt === 0) {
-      res = "12 AM";
-    } else if (hourInt > 12) {
-      res = `${hourInt - 12} PM`;
-    } else {
-      res = `${hourInt} AM`;
-    }
-    return res;
-  }
+	_formatEditHours = (time) => {
+    const timeDiffMilliseconds = Date.now() -time.getTime();
+		const ONE_MIN = 60000;
+		const ONE_HOUR = ONE_MIN * 60;
+		const ONE_DAY = ONE_HOUR * 24;
+		const ONE_MONTH = ONE_DAY * 28;
+		const ONE_YEAR = ONE_MONTH * 12;
+		if  (timeDiffMilliseconds > ONE_YEAR) {
+			if (timeDiffMilliseconds < ONE_YEAR * 2) {
+				return '1 year';
+			} else {
+				return `${Math.floor(timeDiffMilliseconds/ONE_YEAR)} years`;
+			}
+		} else if (timeDiffMilliseconds > ONE_MONTH) {
+			if (timeDiffMilliseconds < ONE_MONTH * 2) {
+				return '1 month';
+			} else {
+				return `${Math.floor(timeDiffMilliseconds/ONE_MONTH)} months`;
+			}
+		} else if (timeDiffMilliseconds > ONE_DAY) {
+			if (timeDiffMilliseconds < ONE_DAY * 2) {
+				return '1 day';
+			} else {
+				return `${Math.floor(timeDiffMilliseconds/ONE_DAY)} days`;
+			}
+		} else if (timeDiffMilliseconds > ONE_HOUR) {
+			if (timeDiffMilliseconds < ONE_HOUR * 2) {
+				return '1 hour';
+			} else {
+				return `${Math.floor(timeDiffMilliseconds/ONE_HOUR)} hours`;
+			}
+		} else if (timeDiffMilliseconds > ONE_MIN) {
+			if (timeDiffMilliseconds < ONE_MIN * 2) {
+				return '1 minute';
+			} else {
+				return `${Math.floor(timeDiffMilliseconds/ONE_MIN)} minutes`;
+			}
+		}
+		return 'now';
+	}
 
   render() {
     return (
-      <div className="event-container">
-        {this.state.events.map(((category, id) => {
-          return (
-            <div key={id} className="card">
-              <div className="image">
-                <div className="img-container">
-                  <img src={Stock}></img>
-                  <button className="export">Export Event</button>
-                </div>
-
-              </div>
-              <div className="card-body">
-                <div className="day">
-                  <a className="curr-date">{this._getDate(category.start_date).day} <br></br> {this._getDate(category.start_date).month}</a>
-                </div>
-
-                <img src={Line} className="img"></img>
-
-                <div className="content">
-                  <a className="event-title">
-                    {category.name} <br></br>
-                  </a>
-                  <a className="event-details">
-                    Hosted By {category.organization} <br></br>
-                  </a>
-                  <a className="event-time">
-                    {this._getHourEnd(category.start_hour) + " - " + this._getHourEnd(category.end_hour)} <br></br>
-                  </a>
-                </div>
+			<div className="outer-container">
+				{/* outer-container is relative position, inner-white-box should have an absolute position with top 6px */}
+				<div className="inner-white-box">
+					{/* Have to set up a width: 100% and height: 157.2px */}
+					<img className="calendar-image" src={Image}></img>
+					{/* Set up the tags at the right */}
+          <div className="calendar-contents">
+            <div className="calendar-status-name">
+              <span className="calendar-status"></span>
+              <span className="calendar-name">{this.state.calendar_name}</span>
+            </div>
+            <div className="calendar-tags-container">
+              <div className="calendar-tags">
+                {this.state.tags.map((tag, id) => <Tag key={id} tagName={tag}/>)}
               </div>
             </div>
-          )
-        }))}
-
-      </div>
+            <p className="calendar-edited-time">
+              Edited {this._formatEditHours(this.state.edited_time)} ago
+            </p>
+          </div>
+				</div>
+			</div>
+    
     );
   }
+}
+
+
+class Tag extends Component {
+	static propTypes = {
+    tagName: PropTypes.string.isRequired
+	}
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div className="tag-rounded">
+				{this.props.tagName}
+			</div>
+		)
+	}
 }
 
 export default Calendar;
