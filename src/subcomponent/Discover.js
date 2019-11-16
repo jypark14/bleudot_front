@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Events from './Events';
+import Calendar from './Calendar';
 
 class Discover extends Component {
   static propTypes = {
@@ -17,6 +18,7 @@ class Discover extends Component {
       searchBarOrgChecked: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.tags = ["Sports", "NCAA"]
   }
   
   handleInputChange(event) {
@@ -80,7 +82,9 @@ class Discover extends Component {
             </div>
           )
         }))}
-
+      <div className="event-container">
+        <Calendar calendar_name="CMU Basketball Team" tags={this.tags} edited_time={new Date(2016, 11)} />
+      </div>
       </div>
     );
   }
