@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Setting from "./assets/setting.svg";
 import Profile from "./assets/profile.svg";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 class Nav extends Component {
