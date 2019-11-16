@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
 import Line from "../assets/line.png";
-<<<<<<< HEAD
 import axios from 'axios';
-=======
 import PropTypes from "prop-types";
->>>>>>> master
 
 
 class Events extends Component {
@@ -26,7 +23,6 @@ class Events extends Component {
     })
   }
 
-<<<<<<< HEAD
   create_post = (opts) => {
     console.log("posting request to backend server API");
     fetch('http://bleudot-backend-api.herokuapp.com/events/', {
@@ -47,7 +43,9 @@ class Events extends Component {
     }
     else {
       console.log("Error")
-=======
+    }
+  }
+
   static getDerivedStateFromProps(nextProps, prevState) {
     let newNextProps = nextProps.categoryName.map(category => {
       return {
@@ -62,7 +60,6 @@ class Events extends Component {
       return {
         events: newNextProps
       }
->>>>>>> master
     }
     return null;
   }

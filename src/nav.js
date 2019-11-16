@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Setting from "./assets/setting.svg";
 import Profile from "./assets/profile.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class Nav extends Component {
@@ -15,18 +15,7 @@ class Nav extends Component {
 		}).then(function (data) {
 			console.log("created Gist")
 		});
-		}
-
-		login_button = (e) => {
-		e.preventDefault();
-		if (e) {
-			console.log(e);
-			// this.create_post({id: c.id});
-		}
-		else {
-			console.log("Error")
-		}
-		}
+	}
 
 	render() {
 		return (
@@ -40,7 +29,7 @@ class Nav extends Component {
 						<Link to="/">BleuDot </Link>
 					</div>
 					<div className="navbar-buttons">
-						<button className="navbar-button-login" onClick={(e)=>this.login_button(e)}>Log In</button>
+						<Link to="/login" className="navbar-button-login" >Log In</Link>
 						<div className="navbar-button-icon"><img src={Setting} /></div>
 						<div className="navbar-button-icon"><img src={Profile} /></div>
 					</div>
