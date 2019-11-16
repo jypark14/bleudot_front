@@ -16,7 +16,6 @@ class DataProvider extends Component {
 
   _getData = async () => {
     const data = await this._callApi();
-    console.log(data);
     this.setState({
       data: data,
       loaded: true

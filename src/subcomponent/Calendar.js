@@ -1,68 +1,29 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
 import Line from "../assets/line.png";
-<<<<<<< HEAD
-import axios from 'axios';
-=======
 import PropTypes from "prop-types";
->>>>>>> master
 
 
-class Events extends Component {
+class Calendar extends Component {
   static propTypes = {
-    categoryName: PropTypes.array.isRequired,
-    type: PropTypes.string
+    calendar_name: PropTypes.string.isRequired,
+		tags: PropTypes.array.isRequired,
+		edited_time: PropTypes.instanceOf(Date)
   }
 
   state = {
-    events: this.props.categoryName.map(category => {
-      return {
-        id: category.id,
-        name: category.name,
-        start_date: category.start_date,
-        start_hour: category.start_time,
-        end_hour: category.end_time
-      }
-    })
+		calendar_name: this.props.calendar_name,
+		tags: this.props.tags,
+		edited_time: this.props.edited_time
   }
 
-<<<<<<< HEAD
-  create_post = (opts) => {
-    console.log("posting request to backend server API");
-    fetch('http://bleudot-backend-api.herokuapp.com/events/', {
-      method: 'put',
-      body: JSON.stringify(opts)
-    }).then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      console.log("created Gist")
-    });
-  }
-
-  export_button = (e, c) => {
-    e.preventDefault();
-    if (c) {
-      console.log(c);
-      // this.create_post({id: c.id});
-    }
-    else {
-      console.log("Error")
-=======
   static getDerivedStateFromProps(nextProps, prevState) {
-    let newNextProps = nextProps.categoryName.map(category => {
+    if (prevState.calendar_name !== nextProps.calendar_name && prevState.tags !== nextProps.tags && prevState.edited_time !== nextProps.edited_time) {
       return {
-        id: category.id,
-        name: category.name,
-        start_date: category.start_date,
-        start_hour: category.start_time,
-        end_hour: category.end_time
+				calendar_name: nextProps.calendar_name,
+				tags: nextProps.tags,
+				edited_time: nextProps.edited_time
       }
-    })
-    if (prevState.events !== newNextProps) {
-      return {
-        events: newNextProps
-      }
->>>>>>> master
     }
     return null;
   }
@@ -149,7 +110,7 @@ class Events extends Component {
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
-                  <button onClick={(e) => this.export_button(e, category)} className="export">Export Event</button>
+                  <button className="export">Export Event</button>
                 </div>
 
               </div>
@@ -181,4 +142,4 @@ class Events extends Component {
   }
 }
 
-export default Events;
+export default Calendar;
