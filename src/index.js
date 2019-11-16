@@ -4,26 +4,28 @@ import './stylesheets/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link,
+	useRouteMatch,
+	useParams
 } from "react-router-dom";
 import Nav from './nav';
+import Login from './login';
 
 
 ReactDOM.render(
 	<Router basename={process.env.PUBLIC_URL}>
 		<Nav />
 		<Switch>
-			<Route path="/login">
+			<Route exact path="/login">
 				{/* place Warren's login page */}
+				<Login />
 			</Route>
 		</Switch>
 		<Switch>
-			<Route path="/">
+			<Route exact path="/">
 				<App />
 			</Route>
 		</Switch>

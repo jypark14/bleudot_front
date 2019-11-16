@@ -1,0 +1,151 @@
+.login-container{
+    width: auto; 
+    height:auto; 
+    
+}
+
+.top-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    padding-top: 41px;
+    margin-bottom: 41px;
+}
+
+.create-account-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #646464;
+    width: fit-content;
+    align-self: center;
+}
+.login-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 68px;
+    color: #646464;
+    width: fit-content;
+    align-self: center;
+}
+.login-box {
+    margin:auto; 
+    margin-top: 57px; 
+    width: 581px;
+    height: 610px;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-form-container{
+    padding-left: 20%; 
+    margin-bottom: 21px;
+}
+.login-email-container{
+    
+}
+
+.login-email-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    color: #646464;
+}
+
+.login-email{
+    width: 320px;
+    height: 40px;
+    padding-left: 2px; 
+    padding-right: 10px; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    background: #FFFFFF;
+    border: 0.5px solid #63CCC7;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login-password-container{
+    margin-top: 20px; 
+}
+
+.login-password-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+    color: #646464;
+}
+
+.login-password{
+    width: 320px;
+    height: 40px;
+    padding-left: 2px; 
+    padding-right: 10px; 
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    background: #FFFFFF;
+    border: 0.5px solid #63CCC7;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.submit{
+    margin-top: 20px;
+    width: 320px;
+    height: 40px;
+    background: #5CA1FF;
+    border-radius: 5px;
+    color: white; 
+}
+.bottom-container {
+    margin-top: 21px;
+}
+.options-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.option-container{
+    margin-bottom: 41px; 
+    width: fit-content;
+    align-self: center;
+}
+
+.option{
+    width: fit-content;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #646464;
+    
+}
+
+.forgot-container{
+    margin-bottom: 10px; 
+}
+.forgot{
+    width: 133px;
+    height: 20px;
+    margin-top: 41px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #646464;
+}
