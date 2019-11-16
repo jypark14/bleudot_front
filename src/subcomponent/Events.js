@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
 import Line from "../assets/line.png";
+import axios from 'axios';
 import PropTypes from "prop-types";
 
 
@@ -20,6 +21,29 @@ class Events extends Component {
         end_hour: category.end_time
       }
     })
+  }
+
+  create_post = (opts) => {
+    console.log("posting request to backend server API");
+    fetch('http://bleudot-backend-api.herokuapp.com/events/', {
+      method: 'put',
+      body: JSON.stringify(opts)
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log("created Gist")
+    });
+  }
+
+  export_button = (e, c) => {
+    e.preventDefault();
+    if (c) {
+      console.log(c);
+      // this.create_post({id: c.id});
+    }
+    else {
+      console.log("Error")
+    }
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -122,7 +146,7 @@ class Events extends Component {
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
-                  <button className="export">Export Event</button>
+                  <button onClick={(e) => this.export_button(e, category)} className="export">Export Event</button>
                 </div>
 
               </div>
