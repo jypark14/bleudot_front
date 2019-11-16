@@ -46,6 +46,15 @@ body {
 
 /* @import url('https://fonts.googleapis.com/css?family=Nunito'); */
 
+.event-container {
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+}
+
+div.event-container::-webkit-scrollbar{
+    width: 30px; 
+}
 .card {
     width: 320px;
     height: 167px;
@@ -56,6 +65,7 @@ body {
     margin-right: 30px;
     margin-top: 20px;
 }
+
 
 .image {
     width: 320px;
@@ -201,7 +211,15 @@ body {
 .navbar-buttons {
     display: flex;
     justify-content: space-between;
-    width: 104px;
+    width: 150px;
+}
+
+.navbar-button-login {
+    padding-left: 10px;
+    padding-right: 10px;  
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    border-radius: 5px; 
 }
 
 .navbar-button-icon {

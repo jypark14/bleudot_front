@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Stock from "../assets/stock.png";
-import Line from "../assets/line.png"
+import Line from "../assets/line.png";
+import axios from 'axios';
+
 
 class Events extends Component {
   constructor(props) {
@@ -28,7 +30,8 @@ class Events extends Component {
     });
   }
 
-  export_button = (c) => {
+  export_button = (e, c) => {
+    e.preventDefault();
     if (c) {
       console.log(c);
       // this.create_post({id: c.id});
@@ -120,7 +123,7 @@ class Events extends Component {
               <div className="image">
                 <div className="img-container">
                   <img src={Stock}></img>
-                  <button onClick={this.export_button(category)} className="export">Export Event</button>
+                  <button onClick={(e) => this.export_button(e, category)} className="export">Export Event</button>
                 </div>
 
               </div>
