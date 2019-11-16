@@ -5,11 +5,8 @@ import Nav from './nav';
 import './stylesheets/App.css';
 
 const App = () => (
-  <React.Fragment>
-    <Nav />
-    <DataProvider endpoint="http://bleudot-backend-api.herokuapp.com/events/" 
-                  render={data => <Discover data={data} />} />
-  </React.Fragment>
+  <DataProvider endpoint="http://bleudot-backend-api.herokuapp.com/events/" 
+                render={data => <Discover data={data} />} />
 );
 
 export default App;
