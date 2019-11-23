@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Events from './Events';
+import FollowCard from './FollowCard';
 import Calendar from './Calendar';
 
 class Discover extends Component {
@@ -36,7 +37,7 @@ class Discover extends Component {
 
 
   render() {
-    let categories = ["Upcoming Events", "Trending", "Happening Near You"]
+    let categories = ["Upcoming Events", "Trending", "Happening Near You","Organizations to Follow"]
     return (
       <div className="container">
         <div className="search-box">
@@ -76,6 +77,12 @@ class Discover extends Component {
               {(id === 2) ?
                 (
                   <Events categoryName={this.state.filtered} topic="near"></Events>
+                ) :
+                (<div></div>)
+              }
+              {(id === 3) ?
+                (
+                  <FollowCard categoryName={this.state.filtered} topic="follow" className="test1"></FollowCard>
                 ) :
                 (<div></div>)
               }
