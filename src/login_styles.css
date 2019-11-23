@@ -116,6 +116,14 @@
     margin: 0 auto;
 }
 
+.checkbox{
+    width: 20px;
+    height: 21px;
+    background: #FFFFFF;
+    border: 0.5px solid #03BFED;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
 .option-container{
     margin-bottom: 41px; 
     width: fit-content;
@@ -124,6 +132,7 @@
 
 .option{
     width: fit-content;
+    height: 21px;
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;

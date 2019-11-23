@@ -68,13 +68,14 @@ export default class Login extends React.Component {
           <div className="bottom-container">
             <div className="options-container">
               <div className="option-container">
+                <input type="checkbox" className="checkbox"></input>
                 <a className="option">Keep me logged in</a>
               </div>
               <div className="forgot-container">
-                <a className="forgot">Forgot <Link>username</Link></a>
+                <a className="forgot">Forgot <Link>Username</Link></a>
               </div>
               <div className="forgot-container">
-                <a className="forgot">Forgot <Link>password</Link></a>
+                <a className="forgot">Forgot <Link>Password</Link></a>
               </div>
             </div>
           </div>

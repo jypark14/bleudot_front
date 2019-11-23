@@ -46,6 +46,7 @@ body {
 /* @import url('https://fonts.googleapis.com/css?family=Nunito'); */
 
 .event-container {
+    display:flex; 
     overflow-x: scroll; 
     overflow-y: hidden; 
     white-space: nowrap; 
@@ -63,6 +64,7 @@ div.event-container::-webkit-scrollbar{
     display: inline-block;
     margin-right: 30px;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 
@@ -317,4 +319,59 @@ div.event-container::-webkit-scrollbar{
     color: #949EA1;
     font-size: 1em;
     padding-left: 37px;
+}
+
+.follow-card{
+    background: #FFFFFF;
+    border-radius: 4px; 
+    padding: 20px; 
+    margin-right: 30px; 
+    margin-bottom: 20px;  
+    box-shadow: 0 4px 2px -2px gray;
+    display:flex; 
+}
+.follow-image{
+    width: 71px; 
+    height: 71px;
+    border-radius: 35.5px; 
+    float: left;
+}
+
+
+.follow-card-body{
+    display: inline-block; 
+    margin-left: 20px; 
+}
+
+.follow-btn{
+    background: #5CA1FF;
+    border: 1px solid #5CA1FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: white; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 2px; 
+    padding-bottom: 2px; 
+    font-size: 12px;
+    font-weight: bold; 
+}
+.follow-event-title{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #5E7379;
+    display: inline; 
+}
+
+.follow-event-details{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline; 
+    color: #B7B7B7;
 }
